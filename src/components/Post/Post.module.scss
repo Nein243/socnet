@@ -1,0 +1,23 @@
+.post{
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &Avatar{
+        text-align: center;
+        img{
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+        }
+    }
+    &Content{
+        padding-left: 10px;
+    }
+    &Name{
+        color: #2d6ff7;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+}
