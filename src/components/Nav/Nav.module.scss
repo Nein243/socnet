@@ -1,0 +1,32 @@
+.nav{
+  grid-area: nav;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  
+  &:visited {
+    color: black;
+  }
+
+  &:hover {
+    color: #2d6ff7;
+    text-decoration: none;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding-bottom: 5px;
+    }
+
+  }
+}
+
+a.active{
+  color: #2d6ff7;
+  text-decoration: none;
+
+}
+
+

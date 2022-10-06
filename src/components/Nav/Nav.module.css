@@ -1,0 +1,1 @@
+.nav{grid-area:nav}.link{text-decoration:none;color:#000}.link:visited{color:#000}.link:hover{color:#2d6ff7;text-decoration:none}.link__item:not(:last-child){padding-bottom:5px}a.active{color:#2d6ff7;text-decoration:none}
