@@ -1,17 +1,12 @@
 import React from 'react';
-import Post from '../Post/Post';
+import Post from './Post/Post.jsx';
 import NewsStyle from './News.module.css';
 
-const News = function () {
+const News = function (props) {
 
-    let posts = [
-        { id: 1, name: 'Denis Denisov', text: 'That is a cool platform', likes: 2, comments: 0 },
-        { id: 1, name: 'Petro Petrov', text: 'Why do nobody text me?', likes: 48, comments: 9 },
-        { id: 1, name: 'Ivan Ivanov', text: 'Glat to meet you here!', likes: 8, comments: 1 },
-        { id: 1, name: 'Valerii Holubiev', text: 'Hey there! It\'s my first post!', likes: 12, comments: 3 },
-    ]
+    
 
-    let postItems = posts.map(post => <Post id={post.id} name={post.name} text={post.text} likes={post.likes} comments={post.comments} />)
+    let postItems = props.appState.posts.map(post => <Post id={post.id} name={post.name} text={post.text} likes={post.likes} comments={post.comments} />)
 
 
     return (
@@ -21,7 +16,7 @@ const News = function () {
                 <textarea></textarea>
                 <button className={NewsStyle.postButton}>Add Post</button>
             </div>
-            {postItems}
+            {postItems }
 
 
         </section>
