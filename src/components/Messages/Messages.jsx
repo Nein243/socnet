@@ -9,24 +9,22 @@ const MessageItem = (props) => {
 }
 
 const Messages = (props) => {
-    
 
-    let dialogsElements = props.appState.dialogs.
-    map(dialog =>  <DialogItem name={dialog.name} id={dialog.id} />)
 
-    let messagesElements = props.appState.messages.
-    map(message => <MessageItem text={message.text} />)
+    let dialogsElements = props.state.dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />)
 
-return (
-    <section className={MessagesStyle.messages}>
-        <div className={MessagesStyle.dialogItems}>
-            {dialogsElements}
-        </div>
-        <div className={MessagesStyle.messagesItems}>
-            {messagesElements}
-        </div>
-    </section>
+    let messagesElements = props.state.messages.map(message => <MessageItem text={message.text} />)
 
-)
+    return (
+        <section className={MessagesStyle.messages}>
+            <div className={MessagesStyle.dialogItems}>
+                {dialogsElements}
+            </div>
+            <div className={MessagesStyle.messagesItems}>
+                {messagesElements}
+            </div>
+        </section>
+
+    )
 }
 export default Messages;
